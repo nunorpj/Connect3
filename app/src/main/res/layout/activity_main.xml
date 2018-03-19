@@ -23,14 +23,38 @@
             android:layout_margin="10dp"
             android:src="@drawable/yellow" />
 
-
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="20dp"
-            android:text="Novo Jogo"
-            android:textColor="#ffffff" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/LLEpate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empate"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Novo Jogo"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
