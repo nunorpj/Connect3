@@ -40,17 +40,16 @@
                 android:layout_margin="10dp"/>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_empate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Novo Jogo"
                 android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textStyle="bold"
-                />
+                android:text="Novo Jogo"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

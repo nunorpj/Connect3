@@ -36,16 +36,22 @@ public class MainActivity extends Activity {
                                 {0,3,6},{1,4,7},{2,5,8}, // vertical
                                 {0,4,8},{2,4,6}};        // diagnal
     public LinearLayout llEmp;
-
+    public Button btnEmp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         player = (ImageView) findViewById(R.id.player);
-
         llEmp = findViewById(R.id.LLEpate);
-
         llEmp.setVisibility(View.INVISIBLE);
+        btnEmp = findViewById(R.id.btn_empate);
+        btnEmp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recreate();
+            }
+        });
+
     }
 
 
@@ -139,6 +145,22 @@ public class MainActivity extends Activity {
         }//end if
 
 
+        Boolean flag=false;
+
+        for(int i = 0 ; i<9;i++){
+            if(gameState[i]==2){
+                flag=true;
+                break;
+            }
+        }
+        if(flag==false){
+            llEmp.setVisibility(View.VISIBLE);
+        }
+
+
+
+
+
     }//end func
 
     public void WIN(){
@@ -168,18 +190,11 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 aDHandler.dismiss();
-                reset();
+                recreate();
             }
         });
     }
 
 
-    public void reset(){
-        gameEnd=false;
-        for (int i =0; i<9;i++){
-            gameState[i]=2;
-        }
-        setContentView(R.layout.activity_main);
 
-    }
 }
